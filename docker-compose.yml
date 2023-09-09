@@ -1,7 +1,7 @@
 services:
   app:
     environment:
-      - PYTHONUNBUFFERED=1
+      PYTHONUNBUFFERED: 1
     build: .
     container_name: auto-test-app
     command: gunicorn serving.src.flask_app:app --bind 0.0.0.0:5010 --reload
