@@ -1,0 +1,14 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: learn-docker-kubernetes:1.0
+    ports:
+      - "40001:5010"
+    restart: always
+    networks:
+      - webnet
+networks:
+  webnet:
+
