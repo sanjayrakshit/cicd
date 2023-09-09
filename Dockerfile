@@ -6,4 +6,4 @@ COPY . .
 
 RUN pip install -r requirements.txt
 
-CMD ["python", "serving/src/flask_app.py"]
+CMD ["python", "-u",  "serving/src/flask_app.py"]
