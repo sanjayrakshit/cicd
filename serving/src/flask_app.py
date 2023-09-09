@@ -9,6 +9,10 @@ def get_details_of_host():
     host_ip = socket.gethostbyname(host_name)
     return f"hostname: {host_name}, hostip: {host_ip}"
 
+@app.route("/health")
+def health():
+    return f"Server is healthy"
+
 
 @app.route("/", methods=["GET", "POST"])
 def default():
