@@ -1,14 +1,9 @@
 services:
-  web:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: learn-docker-kubernetes:1.0
+  app:
+    build: .
+    container_name: auto-test-app
+    command: gunicorn serving.src.flask_app:app --bind 0.0.0.0:5010 --reload
     ports:
-      - "40001:5010"
-    restart: always
-    networks:
-      - webnet
-networks:
-  webnet:
-
+      - 50001:5010
+    volumes:
+      - .:/app

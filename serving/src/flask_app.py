@@ -1,5 +1,7 @@
 from flask import Flask
 import socket
+from uuid import uuid4
+
 
 app = Flask(__name__)
 
@@ -7,7 +9,9 @@ app = Flask(__name__)
 def get_details_of_host():
     host_name = socket.gethostname()
     host_ip = socket.gethostbyname(host_name)
-    return f"hostname: {host_name}, hostip: {host_ip}"
+    return (f"<b>hostname:</b> {host_name}<br>"
+            f"<b>hostip:</b> {host_ip}<br>"
+            f"<b>ID:</b> {uuid4()}")
 
 @app.route("/health")
 def health():
