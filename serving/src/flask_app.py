@@ -13,6 +13,7 @@ def get_details_of_host():
             f"<b>hostip:</b> {host_ip}<br>"
             f"<b>ID:</b> {uuid4()}")
 
+
 @app.route("/health")
 def health():
     return f"Server is healthy"
