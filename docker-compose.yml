@@ -1,9 +1,11 @@
+version: "2"
 services:
   app:
     environment:
       PYTHONUNBUFFERED: 1
     build: .
-    container_name: auto-test-app
+    image: ip_checker_py_flask:1.0
+    container_name: app-ip_checker_py_flask
     command: gunicorn serving.src.flask_app:app --bind 0.0.0.0:5010 --reload
     ports:
       - 50001:5010
