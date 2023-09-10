@@ -1,6 +1,6 @@
 # This is a test repo to learn CICD and orchestration
 
-:bangbang: __Disclaimer: This repo is not a depiction of my skillset. There may be incorrect explanation or code inside it as I've just started learning it__
+:bangbang: __Disclaimer: This repo is not a depiction of my skillset. There may be incorrect explanation or code inside it as I've just started learning it__ :grin:
 
 ## 1. Using kubernetes
 To run it with kubernetes, you need minikube and docker. To do successful deployment you need to run the following commands, in a new terminal.
